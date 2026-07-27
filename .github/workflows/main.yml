@@ -1,4 +1,4 @@
-name: My First CI/CD pipline
+name: CI/CD pipline with Docker
 
 
 on:
@@ -17,3 +17,5 @@ jobs:
       - name: Run a simple test
         run: echo "Pipline is running successfully! no errors found."
 
+      - name: Build Docker image
+        run: docker build -t my-app-image:latest .

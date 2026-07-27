@@ -1,0 +1,19 @@
+name: My First CI/CD pipline
+
+
+on:
+  push:
+    branches:
+      - main
+
+job:
+  build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+      - uses: actions/checkout@v4
+
+      - name: Run a simple test
+      - run: echo "Pipline is running successfully! no errors found."
+
